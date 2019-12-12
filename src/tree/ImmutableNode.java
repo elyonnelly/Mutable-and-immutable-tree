@@ -16,24 +16,12 @@ public class ImmutableNode<T extends Number> implements Node<T> {
                          Function<ImmutableNode<T>, Collection<? extends Node<T>>> childrenConstructor) {
         this.value = value;
         this.parent = parent;
-        //TODO разобраться с этим конструктором
+        //TODO возможно переделать
         this.children = (Collection<Node<T>>)childrenConstructor.apply(this);
         for (var child : this.children) {
             ((ImmutableNode)child).parent = this;
         }
     }
-
-    //конструктор для создания вершины без ребенка. возможно, он должен быть использован при пересоздании дерева
-    //а возможно нет.
-    public ImmutableNode(ImmutableNode<T> oldNode, Node<T> extraChild) {
-        value = oldNode.value;
-        parent = oldNode.parent;
-        children = oldNode.children;
-        if (oldNode.children.contains(extraChild)) {
-            children.remove(extraChild);
-        }
-    }
-
 
     @Override
     public Node<T> getParent() {
@@ -58,6 +46,4 @@ public class ImmutableNode<T extends Number> implements Node<T> {
     public T getValue() {
         return value;
     }
-
-
 }

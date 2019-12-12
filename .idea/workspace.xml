@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="035bce5c-99c5-480c-a61d-762a9aeb691a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/ImmutableNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/ImmutableTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/tests/AbstractTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/tests/ImmutableNodeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/tests/MutableNodeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/tests/MutableTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableNodeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableTreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableTreeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/AbstractTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/AbstractTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tree/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tree/MutableNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/MutableNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tree/MutableNodeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tree/MutableTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/MutableTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/ImmutableNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ImmutableNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/ImmutableTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ImmutableTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,20 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ImmutableTreeTest.initialize">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tree.Main" />
-      <module name="HW2_v2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tree.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ImmutableTreeTest.removeSubtree">
     <configuration name="ImmutableTreeTest.initialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
@@ -109,6 +85,22 @@
       <option name="PACKAGE_NAME" value="tree.tests" />
       <option name="MAIN_CLASS_NAME" value="tree.tests.ImmutableTreeTest" />
       <option name="METHOD_NAME" value="initialize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImmutableTreeTest.removeSubtree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW2_v2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tree.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tree.tests" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.ImmutableTreeTest" />
+      <option name="METHOD_NAME" value="removeSubtree" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,19 +155,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.MutableNodeTest.setChildren" />
       <item itemvalue="JUnit.MutableNodeTest.addChild" />
       <item itemvalue="JUnit.MutableNodeTest.removeChild" />
       <item itemvalue="JUnit.ImmutableTreeTest.initialize" />
+      <item itemvalue="JUnit.ImmutableTreeTest.removeSubtree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ImmutableTreeTest.removeSubtree" />
         <item itemvalue="JUnit.ImmutableTreeTest.initialize" />
         <item itemvalue="JUnit.MutableNodeTest.removeChild" />
         <item itemvalue="JUnit.MutableNodeTest.addChild" />
         <item itemvalue="JUnit.MutableNodeTest.setChildren" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -206,5 +198,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HW2_v2$ImmutableTreeTest_removeSubtree.ic" NAME="ImmutableTreeTest.removeSubtree Coverage Results" MODIFIED="1576166144268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tree.tests.*</FILTER>
+    </SUITE>
   </component>
 </project>

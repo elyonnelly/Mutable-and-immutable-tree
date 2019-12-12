@@ -1,5 +1,7 @@
 package tree;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.function.BinaryOperator;
 
@@ -12,33 +14,38 @@ public class ImmutableTree<T extends Number> extends AbstractTree<T> {
 
     public ImmutableTree(ImmutableTree<T> oldTree, Node<T> extraSubTree) {
         super(oldTree.adder, oldTree.comparator, oldTree.zero);
-        this.root = recreateTreeWithRoot((ImmutableNode<T>)oldTree.root, extraSubTree);
+        this.root = new ImmutableNode<>(oldTree.root.getValue(), null, (tImmutableNode) -> childrenConstructor((ImmutableNode<T>) oldTree.root, (ImmutableNode<T>)extraSubTree));
     }
 
     @Override
-    AbstractTree<T> removeSubtree(Node<T> rootSubTree) {
+    public AbstractTree<T> removeSubtree(Node<T> rootSubTree) {
         return new ImmutableTree<T>(this, rootSubTree);
     }
 
     @Override
-    AbstractTree<T> maximize(int k) {
+    public AbstractTree<T> maximize(int k) {
         return null;
     }
 
     @Override
-    AbstractTree<T> maximize() {
+    public AbstractTree<T> maximize() {
         return null;
     }
 
-    private ImmutableNode<T> recreateTreeWithRoot(ImmutableNode<T> rootSubTree, Node<T> extraSubTree) {
-        if (rootSubTree.getChildren().contains(extraSubTree)) {
-            return new ImmutableNode<>(rootSubTree, extraSubTree);
-        }
+    private Collection<? extends Node<T>> childrenConstructor(ImmutableNode<T> oldNode, ImmutableNode<T> extraSubTree) {
+        Collection<ImmutableNode<T>> newChildren = new ArrayList<>();
+        for (var child : oldNode.getChildren()) {
+            if (child == extraSubTree) {
+                continue;
+            }
 
-        for (var child : rootSubTree.getChildren()) {
-            //ну как бы изменения происходят внутри класса... blya. no.
-
+            if (child.getChildren().size() == 0) {
+                newChildren.add(new ImmutableNode<T>(child.getValue(), oldNode, (tImmutableNode) -> new ArrayList<>()));
+            }
+            else {
+                newChildren.add(new ImmutableNode<T>(child.getValue(), oldNode, (tImmutableNode) -> childrenConstructor(tImmutableNode, extraSubTree)));
+            }
         }
-        return rootSubTree;
+        return newChildren;
     }
 }

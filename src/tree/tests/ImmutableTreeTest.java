@@ -20,7 +20,15 @@ class ImmutableTreeTest {
     ImmutableNode<Integer>[] nodes;
 
     @Test
-    void removeSubtree() {
+    void removeSubtree() throws FileNotFoundException {
+        var tree = initializeTreeFromTestFile(1);
+
+        var subtree = ((ArrayList<Node<Integer>>)tree.getRoot().getChildren()).get(1);
+
+        var newTree = tree.removeSubtree(subtree);
+
+        assert (newTree.getSize() == 2);
+        assert (newTree != tree);
     }
 
     @Test
@@ -28,15 +36,12 @@ class ImmutableTreeTest {
     }
 
     @Test
-    void initialize() {
-        try {
-            initializeTreeFromTestFile(1);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    void initialize() throws FileNotFoundException {
+        var tree = initializeTreeFromTestFile(1);
+        assert (tree.getSize() == 3);
     }
 
-    void initializeTreeFromTestFile(int test) throws FileNotFoundException {
+    AbstractTree<Integer> initializeTreeFromTestFile(int test) throws FileNotFoundException {
         FileReader fr;
         fr = new FileReader(System.getProperty("user.dir") + "/res/" + test + ".txt");
 
@@ -57,7 +62,8 @@ class ImmutableTreeTest {
         }
         nodes[0] = new ImmutableNode<Integer>(values[0], null, (tImmutableNode) -> childrenConstructorFromFile(0));
         AbstractTree<Integer> tree = new ImmutableTree<Integer>(nodes[0], Integer::sum, Comparator.naturalOrder(), 0);
-        int i = 0;
+
+        return tree;
 
     }
 

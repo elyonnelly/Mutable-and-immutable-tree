@@ -25,7 +25,7 @@ public abstract class AbstractTree<T extends Number> {
      * @return number of nodes in tree
      */
     public int getSize() {
-        return computeSizeOfSubtree(root);
+        return computeSizeOfSubtree(root) + 1;
     }
 
     /**
@@ -35,14 +35,14 @@ public abstract class AbstractTree<T extends Number> {
         return computeSumOfSubtree(root);
     }
 
-    abstract AbstractTree<T> removeSubtree(Node<T> rootSubTree);
+    public abstract AbstractTree<T> removeSubtree(Node<T> rootSubTree);
 
-    abstract AbstractTree<T> maximize(int k);
+    public abstract AbstractTree<T> maximize(int k);
 
-    abstract AbstractTree<T> maximize();
+    public abstract AbstractTree<T> maximize();
 
     private int computeSizeOfSubtree(Node<T> node) {
-        int cnt = node.getChildren().size();
+        int cnt = node.getChildren().size() ;
         for (var child : node.getChildren()) {
             cnt += computeSizeOfSubtree(child);
         }
@@ -91,6 +91,8 @@ public abstract class AbstractTree<T extends Number> {
 
         return sum;
     }
+
+
 
 
 }
