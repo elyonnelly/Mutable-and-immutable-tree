@@ -49,7 +49,7 @@ public abstract class AbstractTree<T extends Number> {
         return cnt;
     }
 
-    private T computeSumOfSubtree(Node<T> node) {
+    protected T computeSumOfSubtree(Node<T> node) {
         T sum = root.getValue();
         for (var child : node.getChildren()) {
             sum = adder.apply(sum, computeSumOfSubtree(child));
@@ -69,27 +69,6 @@ public abstract class AbstractTree<T extends Number> {
 
     protected boolean isNodeFound(Node<T> desired) {
         return isNodeFoundInSubtree(root, desired);
-    }
-
-
-    protected T removeNegativeSubtrees(Node<T> rootSubTree) {
-        T sum = rootSubTree.getValue();
-        var forDelete = new ArrayList<Node<T>>();
-        for (var child : rootSubTree.getChildren()) {
-            T sumChild = removeNegativeSubtrees(child);
-
-            if (comparator.compare(sumChild, zero) < 0) {
-                forDelete.add(child);
-            } else {
-                adder.apply(sum, sumChild);
-            }
-        }
-
-        for (var child : forDelete) {
-            removeSubtree(child);
-        }
-
-        return sum;
     }
 
 

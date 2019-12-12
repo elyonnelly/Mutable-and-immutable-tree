@@ -8,7 +8,7 @@ public class MutableTree<T extends Number> extends AbstractTree<T> {
 
     public MutableTree(MutableNode<T> root, BinaryOperator<T> adder, Comparator<T> comparator, T zero) {
         super(adder, comparator, zero);
-        this.root = root; //чтобы MutableTree можно было создать только с MutableNode
+        this.root = root;
     }
 
     /**
@@ -45,6 +45,25 @@ public class MutableTree<T extends Number> extends AbstractTree<T> {
         return this;
     }
 
+    protected T removeNegativeSubtrees(Node<T> rootSubTree) {
+        T sum = rootSubTree.getValue();
+        var forDelete = new ArrayList<Node<T>>();
+        for (var child : rootSubTree.getChildren()) {
+            T sumChild = removeNegativeSubtrees(child);
+
+            if (comparator.compare(sumChild, zero) < 0) {
+                forDelete.add(child);
+            } else {
+                adder.apply(sum, sumChild);
+            }
+        }
+
+        for (var child : forDelete) {
+            removeSubtree(child);
+        }
+
+        return sum;
+    }
 
     /**
      * Returns a tree that has the maximum sum of all values of

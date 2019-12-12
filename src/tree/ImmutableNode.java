@@ -12,12 +12,11 @@ public class ImmutableNode<T extends Number> implements Node<T> {
 
     public ImmutableNode(T value,
                          ImmutableNode<T> parent,
-                         //принимает ноду, отдает коллекцию. Присваивает ноде коллекцию в ее конструкторе и отдает эту самую
                          Function<ImmutableNode<T>, Collection<? extends Node<T>>> childrenConstructor) {
         this.value = value;
         this.parent = parent;
-        //TODO возможно переделать
         this.children = (Collection<Node<T>>)childrenConstructor.apply(this);
+        //окончание инициализации детей
         for (var child : this.children) {
             ((ImmutableNode)child).parent = this;
         }

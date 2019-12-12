@@ -33,6 +33,7 @@ class ImmutableTreeTest {
 
     @Test
     void maximize() {
+
     }
 
     @Test

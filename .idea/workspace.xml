@@ -5,11 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableNodeTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableTreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableTreeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/AbstractTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/AbstractTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/ImmutableNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ImmutableNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/ImmutableTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ImmutableTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/MutableTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/MutableTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/tests/ImmutableNodeTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ImmutableTreeTest.removeSubtree">
+  <component name="RunManager" selected="JUnit.ImmutableTreeTest.initialize">
     <configuration name="ImmutableTreeTest.initialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
@@ -163,11 +167,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ImmutableTreeTest.removeSubtree" />
         <item itemvalue="JUnit.ImmutableTreeTest.initialize" />
+        <item itemvalue="JUnit.MutableNodeTest.setChildren" />
+        <item itemvalue="JUnit.ImmutableTreeTest.removeSubtree" />
         <item itemvalue="JUnit.MutableNodeTest.removeChild" />
         <item itemvalue="JUnit.MutableNodeTest.addChild" />
-        <item itemvalue="JUnit.MutableNodeTest.setChildren" />
       </list>
     </recent_temporary>
   </component>
@@ -198,17 +202,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HW2_v2$ImmutableTreeTest_removeSubtree.ic" NAME="ImmutableTreeTest.removeSubtree Coverage Results" MODIFIED="1576166144268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
