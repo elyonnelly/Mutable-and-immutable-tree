@@ -1,12 +1,14 @@
 package tree;
 
-import java.util.Comparator;
+import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.function.BinaryOperator;
 
 public abstract class AbstractTree<T extends Number> {
     protected Node<T> root;
     protected BinaryOperator<T> adder;
     protected Comparator<T> comparator;
+    protected T sum;
     protected T zero;
 
     protected AbstractTree(BinaryOperator<T> adder, Comparator<T> comparator, T zero) {
@@ -20,13 +22,15 @@ public abstract class AbstractTree<T extends Number> {
     }
 
     /**
-     *
      * @return number of nodes in tree
      */
     public int getSize() {
         return computeSizeOfSubtree(root);
     }
 
+    /**
+     * @return return sum of values in nodes
+     */
     public T getSum() {
         return computeSumOfSubtree(root);
     }
@@ -53,7 +57,6 @@ public abstract class AbstractTree<T extends Number> {
         return sum;
     }
 
-    //логичнее было бы поставить тут статик?
     private boolean isNodeFoundInSubtree(Node<T> currentNode, Node<T> desired) {
         if (currentNode == desired) {
             return true;
@@ -66,6 +69,27 @@ public abstract class AbstractTree<T extends Number> {
 
     protected boolean isNodeFound(Node<T> desired) {
         return isNodeFoundInSubtree(root, desired);
+    }
+
+
+    protected T removeNegativeSubtrees(Node<T> rootSubTree) {
+        T sum = rootSubTree.getValue();
+        var forDelete = new ArrayList<Node<T>>();
+        for (var child : rootSubTree.getChildren()) {
+            T sumChild = removeNegativeSubtrees(child);
+
+            if (comparator.compare(sumChild, zero) < 0) {
+                forDelete.add(child);
+            } else {
+                adder.apply(sum, sumChild);
+            }
+        }
+
+        for (var child : forDelete) {
+            removeSubtree(child);
+        }
+
+        return sum;
     }
 
 

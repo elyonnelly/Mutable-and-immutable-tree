@@ -12,19 +12,15 @@ public class MutableNode<T extends Number> implements Node<T> {
     private MutableNode<T> parent;
     private Collection<Node<T>> children;
 
-    public MutableNode() {
-        children = new ArrayList<>();
-    }
-
     public MutableNode(T value) {
         this.value = value;
         children = new ArrayList<>(); // инициализация эррэйлистом для быстрого удаления-добавления
     }
 
-    public MutableNode(T value, MutableNode<T> parent) {
+    public MutableNode(T value, MutableNode<T> parent, Collection<Node<T>> children) {
         this.value = value;
         this.parent = parent;
-        children = new ArrayList<>(); // в каждом конструкоре должна быть инициализация
+        this.children = children;
     }
 
     @Override
@@ -64,8 +60,10 @@ public class MutableNode<T extends Number> implements Node<T> {
         }
 
         for(var child : this.children) {
-            removeChild((MutableNode)child);
+            ((MutableNode)child).setParent(null);
         }
+        children.removeAll(children);
+
         for(var child : newChildren) {
             addChild(child);
         }
@@ -78,6 +76,9 @@ public class MutableNode<T extends Number> implements Node<T> {
     public void addChild(MutableNode<T> child) {
         if (child == null) {
             throw new IllegalArgumentException("new child is null");
+        }
+        if (children.contains(child)) {
+            throw new IllegalArgumentException("node is already child for this");
         }
 
         MutableNode<T> odlParent = (MutableNode<T>)child.getParent();
@@ -112,6 +113,6 @@ public class MutableNode<T extends Number> implements Node<T> {
         for (int i = 0; i < indents; i++) {
             space += " ";
         }
-        System.out.printf(space + value.toString());
+        System.out.print(space + value.toString());
     }
 }

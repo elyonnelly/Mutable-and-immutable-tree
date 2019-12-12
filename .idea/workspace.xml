@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="035bce5c-99c5-480c-a61d-762a9aeb691a" name="Default Changelist" comment="" />
+    <list default="true" id="035bce5c-99c5-480c-a61d-762a9aeb691a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/ImmutableNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/ImmutableTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/tests/AbstractTreeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/tests/ImmutableNodeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/tests/MutableNodeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/tests/MutableTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableNodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/AbstractTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/AbstractTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/MutableNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/MutableNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/MutableNodeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/MutableTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/MutableTree.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,16 +32,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UpEVlyBpXXQueqc30DAt7xVmlU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -57,13 +84,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ImmutableTreeTest.initialize">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tree.Main" />
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tree.*" />
+          <option name="PATTERN" value="tree.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,84 +98,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutableNodeTest.getParent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ImmutableTreeTest.initialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tree.*" />
+          <option name="PATTERN" value="tree.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tree" />
-      <option name="MAIN_CLASS_NAME" value="tree.MutableNodeTest" />
-      <option name="METHOD_NAME" value="getParent" />
+      <option name="PACKAGE_NAME" value="tree.tests" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.ImmutableTreeTest" />
+      <option name="METHOD_NAME" value="initialize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutableNodeTest.getParentFromSetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutableNodeTest.addChild" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tree.*" />
+          <option name="PATTERN" value="tree.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tree" />
-      <option name="MAIN_CLASS_NAME" value="tree.MutableNodeTest" />
-      <option name="METHOD_NAME" value="getParentFromSetter" />
+      <option name="PACKAGE_NAME" value="tree.tests" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableNodeTest" />
+      <option name="METHOD_NAME" value="addChild" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutableNodeTest.setParent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutableNodeTest.removeChild" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tree.*" />
+          <option name="PATTERN" value="tree.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tree" />
-      <option name="MAIN_CLASS_NAME" value="tree.MutableNodeTest" />
-      <option name="METHOD_NAME" value="setParent" />
+      <option name="PACKAGE_NAME" value="tree.tests" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableNodeTest" />
+      <option name="METHOD_NAME" value="removeChild" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutableNodeTest.setValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutableNodeTest.setChildren" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tree.*" />
+          <option name="PATTERN" value="tree.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tree" />
-      <option name="MAIN_CLASS_NAME" value="tree.MutableNodeTest" />
-      <option name="METHOD_NAME" value="setValue" />
+      <option name="PACKAGE_NAME" value="tree.tests" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableNodeTest" />
+      <option name="METHOD_NAME" value="setChildren" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.MutableNodeTest.getParent" />
-      <item itemvalue="JUnit.MutableNodeTest.setValue" />
-      <item itemvalue="JUnit.MutableNodeTest.getParentFromSetter" />
-      <item itemvalue="JUnit.MutableNodeTest.setParent" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MutableNodeTest.setChildren" />
+      <item itemvalue="JUnit.MutableNodeTest.addChild" />
+      <item itemvalue="JUnit.MutableNodeTest.removeChild" />
+      <item itemvalue="JUnit.ImmutableTreeTest.initialize" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ImmutableTreeTest.initialize" />
+        <item itemvalue="JUnit.MutableNodeTest.removeChild" />
+        <item itemvalue="JUnit.MutableNodeTest.addChild" />
+        <item itemvalue="JUnit.MutableNodeTest.setChildren" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MutableNodeTest.setParent" />
-        <item itemvalue="JUnit.MutableNodeTest.getParentFromSetter" />
-        <item itemvalue="JUnit.MutableNodeTest.getParent" />
-        <item itemvalue="JUnit.MutableNodeTest.setValue" />
       </list>
     </recent_temporary>
   </component>
@@ -162,11 +189,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576045162893</updated>
-      <workItem from="1576045167613" duration="10173000" />
+      <workItem from="1576045167613" duration="41992000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
