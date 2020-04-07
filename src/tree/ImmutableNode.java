@@ -10,6 +10,10 @@ public class ImmutableNode<T extends Number> implements Node<T> {
     private ImmutableNode<T> parent;
     private Collection<Node<T>> children;
 
+    public ImmutableNode() {
+
+    }
+
     public ImmutableNode(T value,
                          ImmutableNode<T> parent,
                          Function<ImmutableNode<T>, Collection<? extends Node<T>>> childrenConstructor) {

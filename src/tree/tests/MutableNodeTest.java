@@ -41,7 +41,6 @@ MutableNode<Integer> node;
         }
         node.setChildren(newChildren);
 
-        //equals осуществляет поэлементное сравнение
         assertEquals(true, newChildren.equals(node.getChildren()));
 
         for (var child : newChildren) {

@@ -50,9 +50,10 @@ public abstract class AbstractTree<T extends Number> {
     }
 
     protected T computeSumOfSubtree(Node<T> node) {
-        T sum = root.getValue();
+        T sum = node.getValue();
         for (var child : node.getChildren()) {
-            sum = adder.apply(sum, computeSumOfSubtree(child));
+            T tempSum = computeSumOfSubtree(child);
+            sum = adder.apply(sum, tempSum);
         }
         return sum;
     }
@@ -61,10 +62,11 @@ public abstract class AbstractTree<T extends Number> {
         if (currentNode == desired) {
             return true;
         }
+        boolean verdict = false;
         for (var child : currentNode.getChildren()) {
-            return isNodeFoundInSubtree(child, desired);
+            verdict = verdict | isNodeFoundInSubtree(child, desired);
         }
-        return false;
+        return verdict;
     }
 
     protected boolean isNodeFound(Node<T> desired) {

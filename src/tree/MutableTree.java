@@ -45,6 +45,11 @@ public class MutableTree<T extends Number> extends AbstractTree<T> {
         return this;
     }
 
+    /**
+     * Removes all subtrees with a negative amount
+     * @param rootSubTree
+     * @return
+     */
     protected T removeNegativeSubtrees(Node<T> rootSubTree) {
         T sum = rootSubTree.getValue();
         var forDelete = new ArrayList<Node<T>>();
@@ -54,7 +59,7 @@ public class MutableTree<T extends Number> extends AbstractTree<T> {
             if (comparator.compare(sumChild, zero) < 0) {
                 forDelete.add(child);
             } else {
-                adder.apply(sum, sumChild);
+                sum = adder.apply(sum, sumChild);
             }
         }
 

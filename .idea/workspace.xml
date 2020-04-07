@@ -5,16 +5,22 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/AbstractTree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/ImmutableTree.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/MutableTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableNodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/AbstractTreeTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableTreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/ImmutableTreeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/MutableNodeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/MutableNodeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/MutableTreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2_v2/tree/tests/MutableTreeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/5.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/AbstractTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/AbstractTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/ImmutableNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ImmutableNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/ImmutableTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/ImmutableTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/MutableTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/MutableTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tree/tests/ImmutableNodeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/tests/AbstractTreeTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/tests/ImmutableTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/tests/MutableNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/tests/MutableNodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/tests/MutableTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/tests/MutableTreeTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +52,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java2/java2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -77,8 +83,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ImmutableTreeTest.initialize">
-    <configuration name="ImmutableTreeTest.initialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MutableTreeTest.maximize">
+    <configuration name="ImmutableTreeTest.getSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
@@ -88,7 +94,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tree.tests" />
       <option name="MAIN_CLASS_NAME" value="tree.tests.ImmutableTreeTest" />
-      <option name="METHOD_NAME" value="initialize" />
+      <option name="METHOD_NAME" value="getSum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutableNodeTest.addChild" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutableTreeTest.getSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
@@ -119,14 +125,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tree.tests" />
-      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableNodeTest" />
-      <option name="METHOD_NAME" value="addChild" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableTreeTest" />
+      <option name="METHOD_NAME" value="getSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutableNodeTest.removeChild" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutableTreeTest.maximize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
@@ -135,14 +141,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tree.tests" />
-      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableNodeTest" />
-      <option name="METHOD_NAME" value="removeChild" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableTreeTest" />
+      <option name="METHOD_NAME" value="maximize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutableNodeTest.setChildren" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutableTreeTest.removeSubtree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW2_v2" />
       <extension name="coverage">
         <pattern>
@@ -151,27 +157,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tree.tests" />
-      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableNodeTest" />
-      <option name="METHOD_NAME" value="setChildren" />
+      <option name="MAIN_CLASS_NAME" value="tree.tests.MutableTreeTest" />
+      <option name="METHOD_NAME" value="removeSubtree" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.MutableNodeTest.setChildren" />
-      <item itemvalue="JUnit.MutableNodeTest.addChild" />
-      <item itemvalue="JUnit.MutableNodeTest.removeChild" />
-      <item itemvalue="JUnit.ImmutableTreeTest.initialize" />
+      <item itemvalue="JUnit.MutableTreeTest.getSize" />
+      <item itemvalue="JUnit.MutableTreeTest.removeSubtree" />
+      <item itemvalue="JUnit.ImmutableTreeTest.getSum" />
       <item itemvalue="JUnit.ImmutableTreeTest.removeSubtree" />
+      <item itemvalue="JUnit.MutableTreeTest.maximize" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ImmutableTreeTest.initialize" />
-        <item itemvalue="JUnit.MutableNodeTest.setChildren" />
+        <item itemvalue="JUnit.MutableTreeTest.maximize" />
         <item itemvalue="JUnit.ImmutableTreeTest.removeSubtree" />
-        <item itemvalue="JUnit.MutableNodeTest.removeChild" />
-        <item itemvalue="JUnit.MutableNodeTest.addChild" />
+        <item itemvalue="JUnit.MutableTreeTest.removeSubtree" />
+        <item itemvalue="JUnit.MutableTreeTest.getSize" />
+        <item itemvalue="JUnit.ImmutableTreeTest.getSum" />
       </list>
     </recent_temporary>
   </component>
@@ -186,6 +192,8 @@
       <option name="presentableId" value="Default" />
       <updated>1576045162893</updated>
       <workItem from="1576045167613" duration="41992000" />
+      <workItem from="1576173301077" duration="7043000" />
+      <workItem from="1576180467291" duration="250000" />
     </task>
     <servers />
   </component>
@@ -197,11 +205,32 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/tree/tests/MutableTreeTest.java</url>
+          <line>64</line>
+          <properties class="tree.tests.MutableTreeTest" method="maximize">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tree/tests/MutableTreeTest.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HW2_v2$ImmutableTreeTest_removeSubtree.ic" NAME="ImmutableTreeTest.removeSubtree Coverage Results" MODIFIED="1576166144268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

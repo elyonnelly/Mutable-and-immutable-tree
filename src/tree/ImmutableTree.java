@@ -45,27 +45,35 @@ public class ImmutableTree<T extends Number> extends AbstractTree<T> {
 
     @Override
     public AbstractTree<T> maximize() {
-        return removeNegativeSubtree((ImmutableNode<T>)root, zero);
+        var tempTree = new ImmutableTree<T>(this, new ImmutableNode<>());
+        tempTree.removeNegativeSubtrees(root);
+        return tempTree;
     }
 
-    private ImmutableTree<T> removeNegativeSubtree(ImmutableNode<T> rootSubTree, T sum) {
-        var sumOfSubtree = rootSubTree.getValue();
-        ImmutableTree<T> tempTree = this;
 
+    /**
+     * Removes all subtrees with a negative amount
+     * @param rootSubTree
+     * @return
+     */
+    protected T removeNegativeSubtrees(Node<T> rootSubTree) {
+        T sum = rootSubTree.getValue();
         var forDelete = new ArrayList<Node<T>>();
         for (var child : rootSubTree.getChildren()) {
-            T tempSum = zero;
-            tempTree = removeNegativeSubtree((ImmutableNode<T>)child, tempSum);
-            if (comparator.compare(tempSum, zero) < 0) {
+            T sumChild = removeNegativeSubtrees(child);
+
+            if (comparator.compare(sumChild, zero) < 0) {
                 forDelete.add(child);
-            }
-            else {
-                adder.apply(sumOfSubtree, tempSum);
+            } else {
+                adder.apply(sum, sumChild);
             }
         }
 
-        sum = sumOfSubtree;
-        return tempTree;
+        for (var child : forDelete) {
+            removeSubtree(child);
+        }
+
+        return sum;
     }
 
     /**
@@ -85,11 +93,10 @@ public class ImmutableTree<T extends Number> extends AbstractTree<T> {
                 newChildren.add(new ImmutableNode<T>(child.getValue(), oldNode, (tImmutableNode) -> new ArrayList<>()));
             }
             else {
-                newChildren.add(new ImmutableNode<T>(child.getValue(), oldNode, (tImmutableNode) -> childrenConstructor(tImmutableNode, extraSubTree)));
+                newChildren.add(new ImmutableNode<T>(child.getValue(), oldNode, (tImmutableNode) -> childrenConstructor((ImmutableNode<T>) child, extraSubTree)));
             }
         }
         return newChildren;
     }
-
 
 }
